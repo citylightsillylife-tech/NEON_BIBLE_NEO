@@ -351,25 +351,41 @@ const CanvasArea = () => {
         height={size.height}
         draggable={isPanning}
         onWheel={handleWheel}
-        onMouseDown={!isBackgroundInteractive ? handlePointerDown : undefined}
-        onMouseMove={!isBackgroundInteractive ? onPointerMove : undefined}
-        onMouseUp={!isBackgroundInteractive ? (e) => {
+        onMouseDown={(e) => {
+          if (isBackgroundInteractive) return
+          handlePointerDown(e)
+        }}
+        onMouseMove={(e) => {
+          if (isBackgroundInteractive) return
+          onPointerMove(e)
+        }}
+        onMouseUp={(e) => {
+          // Always clean up selection box logic
           handlePointerUp(e)
           if (boxRectRef.current && boxRectRef.current.visible()) {
             boxRectRef.current.visible(false)
             boxLayerRef.current?.batchDraw()
           }
-        } : undefined}
-        onDblClick={!isBackgroundInteractive ? handleDoubleClick : undefined}
-        onTouchStart={!isBackgroundInteractive ? handlePointerDown : undefined}
-        onTouchMove={!isBackgroundInteractive ? onPointerMove : undefined}
-        onTouchEnd={!isBackgroundInteractive ? (e) => {
+        }}
+        onDblClick={(e) => {
+          if (isBackgroundInteractive) return
+          handleDoubleClick()
+        }}
+        onTouchStart={(e) => {
+          if (isBackgroundInteractive) return
+          handlePointerDown(e)
+        }}
+        onTouchMove={(e) => {
+          if (isBackgroundInteractive) return
+          onPointerMove(e)
+        }}
+        onTouchEnd={(e) => {
           handlePointerUp(e)
           if (boxRectRef.current && boxRectRef.current.visible()) {
             boxRectRef.current.visible(false)
             boxLayerRef.current?.batchDraw()
           }
-        } : undefined}
+        }}
       >
         <Layer>
           {/* Background Layer */}
@@ -381,9 +397,24 @@ const CanvasArea = () => {
               scaleY={backgroundTransform.scale}
               listening={isBackgroundEditMode}
               draggable={isBackgroundInteractive}
+              onMouseDown={(e) => {
+                if (isBackgroundInteractive) {
+                  e.cancelBubble = true
+                }
+              }}
+              onDragStart={(e) => {
+                if (isBackgroundInteractive) {
+                  const stage = e.target.getStage()
+                  if (stage) stage.container().style.cursor = 'move'
+                }
+              }}
               onDragEnd={(e) => {
-                const { x, y } = e.target.position()
-                useNeonStore.getState().updateBackgroundTransform({ x, y })
+                if (isBackgroundInteractive) {
+                  const stage = e.target.getStage()
+                  if (stage) stage.container().style.cursor = 'default'
+                  const { x, y } = e.target.position()
+                  useNeonStore.getState().updateBackgroundTransform({ x, y })
+                }
               }}
             >
               <Image
