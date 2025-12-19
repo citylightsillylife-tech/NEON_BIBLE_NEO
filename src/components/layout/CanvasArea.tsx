@@ -367,7 +367,7 @@ const CanvasArea = () => {
             boxLayerRef.current?.batchDraw()
           }
         }}
-        onDblClick={(e) => {
+        onDblClick={() => {
           if (isBackgroundInteractive) return
           handleDoubleClick()
         }}
