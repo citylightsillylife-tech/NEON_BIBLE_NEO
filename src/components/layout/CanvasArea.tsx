@@ -229,14 +229,11 @@ const CanvasArea = () => {
   // Keyboard Shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Enter') {
+      // Finish Line: Enter or F
+      if (event.key === 'Enter' || event.key.toUpperCase() === 'F') {
         endActivePath()
         return
       }
-      // Assuming selectedCount check logic handled inside or via store state if needed, but simplest is direct store check if we want strictness, 
-      // but here we rely on the fact that if nothing selected delete won't do anything visible.
-      // But let's check store to be safe if we had it in scope? 
-      // We do have selectedCount selector.
 
       if (['INPUT', 'TEXTAREA'].includes((event.target as HTMLElement).tagName)) return
       if (event.key === 'Backspace' || event.key === 'Delete') {

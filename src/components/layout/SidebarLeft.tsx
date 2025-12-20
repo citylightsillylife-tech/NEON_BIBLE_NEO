@@ -7,12 +7,12 @@ import { isTyping } from '@/utils/keyboard'
 import { Hand, MousePointer2, PenTool, Eraser, Square, Circle as CircleIcon, Scissors, Link } from 'lucide-react'
 
 const tools: Array<{ key: Tool; label: string; icon: ComponentType<{ className?: string }>; shortcut: string }> = [
-  { key: 'select', label: 'Select', icon: MousePointer2, shortcut: 'V' },
-  { key: 'pen', label: 'Pen', icon: PenTool, shortcut: 'P' },
+  { key: 'select', label: 'Select', icon: MousePointer2, shortcut: 'Q' },
+  { key: 'pen', label: 'Pen', icon: PenTool, shortcut: 'W' },
   { key: 'eraser', label: 'Eraser', icon: Eraser, shortcut: 'E' },
   { key: 'rectangle', label: 'Rectangle', icon: Square, shortcut: 'R' },
-  { key: 'circle', label: 'Circle', icon: CircleIcon, shortcut: 'C' },
-  { key: 'hand', label: 'Hand', icon: Hand, shortcut: 'H' },
+  { key: 'circle', label: 'Circle', icon: CircleIcon, shortcut: 'A' },
+  { key: 'hand', label: 'Hand', icon: Hand, shortcut: 'D' },
 ]
 
 const SidebarLeft = () => {
@@ -34,9 +34,18 @@ const SidebarLeft = () => {
         return
       }
 
-      // Cut (Scissors)
+      // Cut (Scissors) - S
       if (key === 'S') {
         setCurrentTool('cut')
+        return
+      }
+
+      // Glue (Join) - G
+      if (key === 'G') {
+        const { selectedCount, joinSelectedPaths } = useNeonStore.getState()
+        if (selectedCount === 2) {
+          joinSelectedPaths()
+        }
       }
     }
 
@@ -85,15 +94,20 @@ const SidebarLeft = () => {
 
         {/* Glue Button (Contextual) */}
         {useNeonStore(s => s.selectedCount === 2) && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => useNeonStore.getState().joinSelectedPaths()}
-            title="Glue Paths (Join)"
-            className="animate-in fade-in zoom-in duration-200"
-          >
-            <Link className="h-5 w-5 text-green-400" />
-          </Button>
+          <div className="relative group">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => useNeonStore.getState().joinSelectedPaths()}
+              title="Glue Paths (G)"
+              className="animate-in fade-in zoom-in duration-200"
+            >
+              <Link className="h-5 w-5 text-green-400" />
+            </Button>
+            <span className="absolute bottom-0.5 right-1 text-[8px] font-mono opacity-50 pointer-events-none select-none">
+              G
+            </span>
+          </div>
         )}
       </div>
     </aside>
