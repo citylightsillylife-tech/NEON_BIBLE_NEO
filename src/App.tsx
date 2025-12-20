@@ -4,17 +4,13 @@ import CanvasArea from '@/components/layout/CanvasArea'
 import Header from '@/components/layout/Header'
 import SidebarLeft from '@/components/layout/SidebarLeft'
 import SidebarRight from '@/components/layout/SidebarRight'
+import { isTyping } from '@/utils/keyboard'
+
 
 const App = () => {
   useEffect(() => {
-    const isTyping = () => {
-      const el = document.activeElement as HTMLElement | null
-      if (!el) return false
-      const tag = el.tagName
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true
-      if (el.closest?.('[contenteditable="true"]')) return true
-      return false
-    }
+    // isTyping logic moved to utils/keyboard.ts
+
 
     const onKeyDown = (e: KeyboardEvent) => {
       if (isTyping()) return
