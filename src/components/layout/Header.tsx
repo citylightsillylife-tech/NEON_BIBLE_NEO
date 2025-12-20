@@ -2,13 +2,10 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
 import { useRef } from 'react'
-import { Settings } from 'lucide-react'
 
 import { useNeonStore } from '@/store/useNeonStore'
 // downloadStageAsPng removed
@@ -208,30 +205,6 @@ const Header = () => {
         >
           📖 マニュアル
         </Button>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              size="icon"
-              variant="ghost"
-              className="rounded-lg border border-transparent hover:border-border hover:bg-white/5"
-            >
-              <Settings className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-44">
-            <DropdownMenuLabel>Settings</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => console.log('[settings] preferences')}>
-              Preferences
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => console.log('[settings] keyboard-shortcuts')}>
-              Keyboard shortcuts
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
       </div>
     </header>
   )
