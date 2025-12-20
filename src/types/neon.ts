@@ -1,6 +1,6 @@
 export type Tool = 'select' | 'pen' | 'hand' | 'eraser' | 'rectangle' | 'circle' | 'cut'
 
-export type LayerKey = 'background' | 'neon'
+export type LayerKey = 'background'
 
 export type NeonPath = {
   id: string

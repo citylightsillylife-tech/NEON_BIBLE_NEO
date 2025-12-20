@@ -125,7 +125,7 @@ export const useNeonStore = create<NeonState>()(
     persist(
       (set, get) => ({
         currentTool: 'select',
-        layerVisibility: { background: true, neon: true },
+        layerVisibility: { background: true },
         neonPaths: [],
         activePathId: null,
         selectedPathIds: [],

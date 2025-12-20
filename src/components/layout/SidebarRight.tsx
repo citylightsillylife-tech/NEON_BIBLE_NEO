@@ -14,7 +14,6 @@ import { Download, Redo2, Trash2, Undo2 } from 'lucide-react'
 
 const layers: Array<{ key: LayerKey; label: string; description: string }> = [
   { key: 'background', label: 'Background', description: '下絵' },
-  { key: 'neon', label: 'Neon', description: 'ネオンパス' },
 ]
 
 const SidebarRight = () => {
