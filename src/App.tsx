@@ -4,6 +4,7 @@ import CanvasArea from '@/components/layout/CanvasArea'
 import Header from '@/components/layout/Header'
 import SidebarLeft from '@/components/layout/SidebarLeft'
 import SidebarRight from '@/components/layout/SidebarRight'
+import Footer from '@/components/layout/Footer'
 import { isTyping } from '@/utils/keyboard'
 
 
@@ -56,6 +57,7 @@ const App = () => {
         </div>
         <SidebarRight />
       </main>
+      <Footer />
     </div>
   )
 }

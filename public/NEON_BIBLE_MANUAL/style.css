@@ -10,22 +10,22 @@
     --secondary: #00D9FF;
     --accent: #FF1493;
     --success: #00FF88;
-    
+
     /* Backgrounds */
     --bg-dark: #0a0a12;
     --bg-darker: #050508;
     --bg-gradient: linear-gradient(135deg, #0f0c1f 0%, #0a0a12 50%, #050508 100%);
-    
+
     /* Glass Effect */
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    
+
     /* Text */
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.7);
     --text-muted: rgba(255, 255, 255, 0.5);
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -33,7 +33,7 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
-    
+
     /* Typography */
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-heading: 'Outfit', sans-serif;
@@ -60,7 +60,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
@@ -179,8 +184,17 @@ a:hover {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }
 
 .hero-content {
@@ -413,14 +427,37 @@ a:hover {
     border: 1px solid var(--glass-border);
 }
 
-.select-icon { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.pen-icon { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-.eraser-icon { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
-.rect-icon { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
-.circle-icon { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
-.hand-icon { background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%); }
-.cut-icon { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
-.glue-icon { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); }
+.select-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.pen-icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.eraser-icon {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.rect-icon {
+    background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+.circle-icon {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.hand-icon {
+    background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+}
+
+.cut-icon {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.glue-icon {
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+}
 
 .tool-info {
     flex: 1;
@@ -829,6 +866,21 @@ a:hover {
     font-size: 0.875rem;
 }
 
+.footer-license {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    margin-top: 0.5rem;
+}
+
+.footer-license a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.footer-license a:hover {
+    color: var(--secondary);
+}
+
 /* ========================================
    Responsive Design
    ======================================== */
@@ -836,19 +888,19 @@ a:hover {
     .nav-menu {
         display: none;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .hero-cta {
         flex-direction: column;
     }
-    
+
     .intro-grid,
     .tools-grid,
     .properties-grid,
@@ -856,22 +908,22 @@ a:hover {
     .feature-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .workflow-step {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
-    
+
     .workflow-step:not(:last-child)::after {
         display: none;
     }
-    
+
     .shortcut-item {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--spacing-xs);
     }
-    
+
     .shortcut-label {
         text-align: left;
     }
@@ -885,6 +937,7 @@ a:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
