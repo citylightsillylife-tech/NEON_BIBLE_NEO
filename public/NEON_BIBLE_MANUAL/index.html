@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEON_BIBLE - プロフェッショナルなネオン描画アプリケーションの完全操作マニュアル">
+    <title>NEON_BIBLE 操作マニュアル</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo">NB</div>
+                <span class="brand-text">NEON_BIBLE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#intro" class="nav-link">はじめに</a></li>
+                <li><a href="#tools" class="nav-link">ツール</a></li>
+                <li><a href="#properties" class="nav-link">プロパティ</a></li>
+                <li><a href="#workflow" class="nav-link">ワークフロー</a></li>
+                <li><a href="#shortcuts" class="nav-link">ショートカット</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">操作マニュアル</div>
+            <h1 class="hero-title">
+                <span class="gradient-text">NEON_BIBLE</span>
+                <br>ユーザーガイド
+            </h1>
+            <p class="hero-subtitle">
+                プロフェッショナルなネオン描画体験のための完全マニュアル
+            </p>
+            <div class="hero-cta">
+                <a href="#intro" class="btn btn-primary">使い始める</a>
+                <a href="#tools" class="btn btn-secondary">ツール一覧</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section id="intro" class="section">
+        <div class="container">
+            <h2 class="section-title">はじめに</h2>
+            <div class="intro-grid">
+                <div class="glass-card">
+                    <div class="card-icon">✨</div>
+                    <h3>NEON_BIBLEとは</h3>
+                    <p>NEON_BIBLEは、美しいネオンエフェクトを持つアートワークを簡単に作成できる、プロフェッショナル向け描画アプリケーションです。直感的な操作で、リアルなネオン管の輝きを再現します。</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>主な特徴</h3>
+                    <ul class="feature-list">
+                        <li>リアルタイムネオングロー効果</li>
+                        <li>8種類の専用描画ツール</li>
+                        <li>詳細なプロパティ調整</li>
+                        <li>背景画像サポート</li>
+                        <li>高品質PNG出力</li>
+                        <li>キーボードショートカット完備</li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>クイックスタート</h3>
+                    <ol class="feature-list">
+                        <li>ツールバーから<strong>Pen (W)</strong>を選択</li>
+                        <li>キャンバス上をクリックして描画開始</li>
+                        <li>右パネルでカラー・グローを調整</li>
+                        <li>完成したら<strong>Export PNG</strong>で保存</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">ツール一覧</h2>
+            <p class="section-subtitle">8つの専用ツールで、あらゆる表現が可能に</p>
+            
+            <div class="tools-grid">
+                <!-- Select Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon select-icon">⌖</div>
+                        <div class="tool-info">
+                            <h3>Select</h3>
+                            <div class="shortcut-badge">Q</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        オブジェクトの選択・移動・変形を行います。クリックで単一選択、ドラッグで複数選択が可能です。選択したオブジェクトはドラッグで移動、アンカーポイントをドラッグして形状変更ができます。
+                    </p>
+                    <div class="tool-tips">
+                        <strong>ヒント:</strong> Shiftキーを押しながらクリックで複数選択
+                    </div>
+                </div>
+
+                <!-- Pen Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon pen-icon">✎</div>
+                        <div class="tool-info">
+                            <h3>Pen</h3>
+                            <div class="shortcut-badge">W</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        ネオンラインを描画します。クリックで頂点を追加、ダブルクリックまたはEscキーで描画終了。ポリラインとして自由な形状を作成できます。描画中はガイドラインが表示されます。
+                    </p>
+                    <div class="tool-tips">
+                        <strong>ヒント:</strong> Escキーで描画を終了、Enterで閉じたパスを作成
+                    </div>
+                </div>
+
+                <!-- Eraser Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon eraser-icon">⌫</div>
+                        <div class="tool-info">
+                            <h3>Eraser</h3>
+                            <div class="shortcut-badge">E</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        不要なラインを削除します。消したいラインをクリックするだけで、即座に削除されます。複数のラインを連続して消去することも可能です。
+                    </p>
+                    <div class="tool-tips">
+                        <strong>ヒント:</strong> 誤って消した場合はCtrl+Z（Cmd+Z）で元に戻せます
+                    </div>
+                </div>
+
+                <!-- Rectangle Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon rect-icon">▭</div>
+                        <div class="tool-info">
+                            <h3>Rectangle</h3>
+                            <div class="shortcut-badge">R</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        矩形のネオンフレームを作成します。ドラッグで矩形の大きさを決定。正確な四角形が必要な場合に便利です。作成後はSelectツールで調整できます。
+                    </p>
+                    <div class="tool-tips">
+                        <strong>ヒント:</strong> Shiftキーで正方形を作成
+                    </div>
+                </div>
+
+                <!-- Circle Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon circle-icon">◯</div>
+                        <div class="tool-info">
+                            <h3>Circle</h3>
+                            <div class="shortcut-badge">A</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        円形のネオンフレームを作成します。ドラッグで円の大きさを決定。看板やロゴなど、曲線的なデザインに最適です。
+                    </p>
+                    <div class="tool-tips">
+                        <strong>ヒント:</strong> Shiftキーで真円を作成
+                    </div>
+                </div>
+
+                <!-- Hand Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon hand-icon">✋</div>
+                        <div class="tool-info">
+                            <h3>Hand</h3>
+                            <div class="shortcut-badge">D</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        キャンバスの表示領域を移動（パン）します。ドラッグでキャンバスをスクロール。大きなアートワークの作業に便利です。マウスホイールでズーム可能。
+                    </p>
+                    <div class="tool-tips">
+                        <strong>ヒント:</strong> スペースキーを長押しで一時的にHandツールに切り替え
+                    </div>
+                </div>
+
+                <!-- Cut Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon cut-icon">✂</div>
+                        <div class="tool-info">
+                            <h3>Cut (Scissors)</h3>
+                            <div class="shortcut-badge">S</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        パスを分割します。選択したパス上の任意の位置をクリックして、ラインを2つに分割できます。複雑な形状の編集に便利です。
+                    </p>
+                    <div class="tool-tips">
+                        <strong>ヒント:</strong> 分割後は2つの独立したオブジェクトとして編集可能
+                    </div>
+                </div>
+
+                <!-- Glue Tool -->
+                <div class="tool-card tool-card-special">
+                    <div class="tool-header">
+                        <div class="tool-icon glue-icon">🔗</div>
+                        <div class="tool-info">
+                            <h3>Glue (Join)</h3>
+                            <div class="shortcut-badge">G</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        2つのパスを結合します。<strong>2つのオブジェクトを選択した状態でのみ使用可能</strong>。端点が近い2つのパスを1つに繋げることができます。
+                    </p>
+                    <div class="tool-tips special-tips">
+                        <strong>特殊:</strong> ツールバーには常に表示されず、2つ選択時のみアクティブに
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="section">
+        <div class="container">
+            <h2 class="section-title">プロパティパネル</h2>
+            <p class="section-subtitle">選択したオブジェクトの詳細設定</p>
+
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-header">
+                        <span class="property-icon">🎨</span>
+                        <h3>Color（カラー）</h3>
+                    </div>
+                    <p>ネオンラインの色を設定します。カラーピッカーで直感的に選択可能。鮮やかな色ほどネオンらしい輝きが得られます。</p>
+                    <div class="property-example">
+                        推奨: #FF00FF (マゼンタ), #00FFFF (シアン), #FF1493 (ピンク)
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-header">
+                        <span class="property-icon">📏</span>
+                        <h3>Core Width（コア幅）</h3>
+                    </div>
+                    <p>ネオン管の中心部分の太さを調整します。範囲: 1〜20px。細いラインは繊細な表現、太いラインは大胆な表現に適しています。</p>
+                    <div class="property-example">
+                        デフォルト: 4px
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-header">
+                        <span class="property-icon">✨</span>
+                        <h3>Glow（グロー強度）</h3>
+                    </div>
+                    <p>ネオンの光の広がりを調整します。範囲: 0〜50px。値が大きいほど、周囲への光の拡散が強くなります。リアルなネオン効果の核となるパラメータです。</p>
+                    <div class="property-example">
+                        デフォルト: 10px | 推奨: 15-25px（鮮やかな輝き）
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-header">
+                        <span class="property-icon">⭕</span>
+                        <h3>Corner Radius（角の丸み）</h3>
+                    </div>
+                    <p>パスの角を丸くします。範囲: 0〜100px。値が大きいほど角が滑らかになります。<strong>Smooth Curveが有効な場合は無効化されます。</strong></p>
+                    <div class="property-example">
+                        ※短いセグメントでは自動的に制限されます
+                    </div>
+                </div>
+
+                <div class="property-card property-card-highlight">
+                    <div class="property-header">
+                        <span class="property-icon">〜</span>
+                        <h3>Smooth Curve（スムーズ曲線）</h3>
+                    </div>
+                    <p>パス全体を滑らかな曲線に変換します。ONにすると、カクカクした直線が美しいカーブになります。手書き風の自然なラインを作りたい場合に有効です。</p>
+                    <div class="property-example">
+                        有効時はCorner Radiusが無効化されます
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-header">
+                        <span class="property-icon">🎯</span>
+                        <h3>Tension（テンション）</h3>
+                    </div>
+                    <p>Smooth Curve有効時の曲線の強さを調整します。範囲: 0〜1。0に近いほど緩やかなカーブ、1に近いほど急なカーブになります。</p>
+                    <div class="property-example">
+                        デフォルト: 0.5 | ※Smooth Curve有効時のみ表示
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-Edit Info -->
+            <div class="info-box">
+                <div class="info-icon">ℹ️</div>
+                <div>
+                    <h4>複数選択時の編集</h4>
+                    <p>複数のオブジェクトを選択すると、一括でプロパティを変更できます。値が異なる場合は「Mixed」と表示されます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">ワークフロー</h2>
+            <p class="section-subtitle">プロジェクトの開始から完成まで</p>
+
+            <div class="workflow-container">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>キャンバス設定</h3>
+                        <p>右パネルの<strong>Canvas</strong>セクションでキャンバスサイズを選択。Instagram (1080×1080) やA4などのプリセットが利用可能です。</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>背景画像の設定（オプション）</h3>
+                        <p><strong>Layers > Upload Image</strong>で下絵をアップロード。Opacity（透明度）、Scale（拡大率）を調整し、<strong>Lock Background</strong>で固定します。</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>描画</h3>
+                        <p><strong>Pen (W)</strong>で自由な形状、<strong>Rectangle (R)</strong>や<strong>Circle (A)</strong>で幾何学図形を描画。カラーやグローは右パネルでいつでも調整可能です。</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>仕上げ</h3>
+                        <p><strong>Select (Q)</strong>でオブジェクトを選択し、位置や形状を調整。<strong>Cut (S)</strong>や<strong>Glue (G)</strong>で細かい編集も可能です。</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>保存・出力</h3>
+                        <p>ヘッダーの<strong>Save</strong>でプロジェクト保存、<strong>Export > Export PNG</strong>で画像として出力。背景は黒または透明を選択できます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canvas & Layers -->
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🖼️ キャンバス設定</h3>
+                    <ul>
+                        <li><strong>Canvas Size:</strong> 1080×1080, 1920×1080, A4など</li>
+                        <li>作成後もサイズ変更可能</li>
+                        <li>アートボード境界線で範囲を視覚化</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📂 レイヤー管理</h3>
+                    <ul>
+                        <li><strong>Background:</strong> 下絵の表示/非表示</li>
+                        <li><strong>Angle Warnings:</strong> 急角度警告マーカー</li>
+                        <li><strong>Background Edit Mode:</strong> 背景の編集モード</li>
+                        <li><strong>Lock Background:</strong> 背景を固定</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💾 ファイル操作</h3>
+                    <ul>
+                        <li><strong>Save:</strong> プロジェクト全体をJSONで保存</li>
+                        <li><strong>Open:</strong> 保存したプロジェクトを読み込み</li>
+                        <li><strong>Export PNG:</strong> Black/Transparent背景を選択</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shortcuts Section -->
+    <section id="shortcuts" class="section">
+        <div class="container">
+            <h2 class="section-title">キーボードショートカット</h2>
+            <p class="section-subtitle">効率的な作業のための完全ガイド</p>
+
+            <div class="shortcuts-grid">
+                <!-- Tools -->
+                <div class="shortcut-category">
+                    <h3 class="category-title">🛠️ ツール</h3>
+                    <div class="shortcut-list">
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Q</span>
+                            <span class="shortcut-label">Select（選択）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">W</span>
+                            <span class="shortcut-label">Pen（ペン）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">E</span>
+                            <span class="shortcut-label">Eraser（消しゴム）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">R</span>
+                            <span class="shortcut-label">Rectangle（矩形）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">A</span>
+                            <span class="shortcut-label">Circle（円形）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">S</span>
+                            <span class="shortcut-label">Cut（カット）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">D</span>
+                            <span class="shortcut-label">Hand（ハンド）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">G</span>
+                            <span class="shortcut-label">Glue（結合）※2つ選択時</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Edit -->
+                <div class="shortcut-category">
+                    <h3 class="category-title">✏️ 編集</h3>
+                    <div class="shortcut-list">
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Ctrl/Cmd + Z</span>
+                            <span class="shortcut-label">Undo（元に戻す）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Ctrl/Cmd + Shift + Z</span>
+                            <span class="shortcut-label">Redo（やり直し）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Ctrl/Cmd + Y</span>
+                            <span class="shortcut-label">Redo（やり直し）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Delete/Backspace</span>
+                            <span class="shortcut-label">選択を削除</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drawing -->
+                <div class="shortcut-category">
+                    <h3 class="category-title">✍️ 描画</h3>
+                    <div class="shortcut-list">
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Esc</span>
+                            <span class="shortcut-label">描画終了（Penツール時）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Enter</span>
+                            <span class="shortcut-label">閉じたパスを作成</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Shift + ドラッグ</span>
+                            <span class="shortcut-label">正方形/正円を作成</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Space（長押し）</span>
+                            <span class="shortcut-label">一時的にHandツール</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Selection -->
+                <div class="shortcut-category">
+                    <h3 class="category-title">🎯 選択</h3>
+                    <div class="shortcut-list">
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Shift + クリック</span>
+                            <span class="shortcut-label">複数選択（追加）</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">ドラッグ</span>
+                            <span class="shortcut-label">範囲選択</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">クリック</span>
+                            <span class="shortcut-label">単一選択</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-box">
+                <div class="tips-icon">💡</div>
+                <div>
+                    <h4>効率化のコツ</h4>
+                    <p>左手でショートカット（Q, W, E, R, A, S, D, G）、右手でマウス操作という配置で、スムーズな作業が可能です。頻繁に使うツールは指に覚えさせましょう！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">FAQ & トラブルシューティング</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Q. グローが思ったより弱い/強い</div>
+                    <div class="faq-answer">
+                        <p>右パネルの<strong>Properties > Glow</strong>スライダーで調整してください。推奨値は15-25pxです。また、明るい色ほどグローが目立ちます。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 背景画像が動いてしまう</div>
+                    <div class="faq-answer">
+                        <p>右パネルの<strong>Layers > Lock Background</strong>をONにしてください。これで背景が固定され、誤操作を防げます。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. Penツールで描画が終わらない</div>
+                    <div class="faq-answer">
+                        <p><strong>Escキー</strong>を押すか、始点をダブルクリックすると描画が終了します。Enterキーで閉じたパスを作成することもできます。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 2つのパスを繋ぎたい</div>
+                    <div class="faq-answer">
+                        <p>Selectツール（Q）で2つのパスを選択した状態で、<strong>Gキー</strong>または左ツールバーの<strong>Glue（Link）アイコン</strong>をクリックしてください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. パスを分割したい</div>
+                    <div class="faq-answer">
+                        <p><strong>Cut Tool (S)</strong>を選択し、分割したい位置をクリックしてください。パスが2つに分かれます。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 出力した画像が低品質</div>
+                    <div class="faq-answer">
+                        <p>右パネルの<strong>Export > Export Size</strong>で高解像度（2048×2048やA4）を選択してから出力してください。キャンバスサイズに関わらず高品質出力が可能です。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. プロジェクトを保存・再開したい</div>
+                    <div class="faq-answer">
+                        <p>ヘッダーの<strong>Save</strong>でJSONファイルとして保存、<strong>Open</strong>で読み込めます。背景画像の設定、全てのオブジェクトとプロパティが保存されます。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 角を丸くしたいのに効かない</div>
+                    <div class="faq-answer">
+                        <p><strong>Smooth Curve</strong>が有効になっている場合、Corner Radiusは無効化されます。どちらか一方のみ使用してください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 急角度警告マーカーとは？</div>
+                    <div class="faq-answer">
+                        <p>パスの角度が急すぎる箇所に警告マーカーが表示されます。実際のネオン管では鋭角な曲げが難しいため、デザインの参考にしてください。<strong>Layers > Angle warnings</strong>でON/OFF可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">NB</div>
+                    <span>NEON_BIBLE</span>
+                </div>
+                <p class="footer-text">
+                    プロフェッショナルなネオン描画体験を。
+                </p>
+                <p class="footer-copyright">
+                    © 2025 NEON_BIBLE. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

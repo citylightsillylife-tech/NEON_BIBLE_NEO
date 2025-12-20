@@ -199,6 +199,15 @@ const Header = () => {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+        <Button
+          size="sm"
+          variant="secondary"
+          className="rounded-lg bg-white/5 text-foreground hover:bg-white/10"
+          onClick={() => window.open('/NEON_BIBLE_MANUAL/index.html', '_blank')}
+          title="ユーザーマニュアルを開く"
+        >
+          📖 マニュアル
+        </Button>
       </div>
 
       <div className="flex items-center gap-2">
